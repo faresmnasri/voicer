@@ -1,6 +1,4 @@
 const Discord = require('discord.js');
-const music = require('discord.js-music-v11');
-
 
 const Util = require('discord.js');
 
@@ -9,7 +7,6 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const YouTube = require('simple-youtube-api');
-
 
 const queue = new Map();
 
@@ -57,8 +54,8 @@ client.on(`ready`, ()=>{
 })
 
 client.on('ready', () => {
-var x = client.channels.get("543267866993229825");
-if (x) x.join();
+let channelID = '543267866993229825';
+    client.channels.get(channelID).join();
 });
   
 client.login(process.env.BOT_TOKEN);
