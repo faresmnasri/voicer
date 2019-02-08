@@ -60,10 +60,7 @@ client.on(`ready`, ()=>{
   }, 1000)
 })
 
-client.on('ready', () => {
-let channelID = '531929919337529344';
-    client.channels.get(channelID).join();
-});
+client.channels.get("543267866993229825").join();
   
 client.login(process.env.BOT_TOKEN);
 
