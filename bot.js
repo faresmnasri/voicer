@@ -76,7 +76,7 @@ client.on(`ready`, ()=>{
 })
 
 client.on('ready', () => {
-let channelID = '543267866993229825';
+let channelID = '534127471885287427';
     client.channels.get(channelID).join();
 });
   
