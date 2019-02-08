@@ -1,42 +1,42 @@
+const Discord = require('discord.js'); 
+const client = new Discord.Client(); 
 const Eris = require("eris");
-var kboosh = new Eris(process.env.BOT_TOKEN);
-var kboosh_id = "533826952088387584";
-                    var i = "0";
-                    var x = "0";
-kboosh.on("voiceChannelJoin", (msg) => {
-    x++;
-    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「" + x + "」"});
-});
-kboosh.on("voiceChannelLeave", (msg) => {
-    x--;
-    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「" + x + "」"});
-});
 
-kboosh.on("messageCreate", (msg) => {
-    if(msg.author.id !== "506990071644422149") return kboosh.createMessage('__**This Command is only for the bot Owner**__');
-    if(msg.content === "$voice") {
-        let users = msg.channel.guild.members.map(m => m.user.id);
-        let messages = [];
-        messages.push(users);
-        setTimeout(function(){
-        while (i <= messages[0].length - 1) {
-            check = msg.channel.guild.members.get(messages[0][i]);
-        if(!check.voiceState.channelID){
-                i++;
-        }else{
-                x++;
-                i++;
-        }
-}
-    console.log(x);
-    kboosh.createMessage(msg.channel.id, "Voice Online Members Now Are: **"+x+"** Members!");
-    kboosh.editChannel(kboosh_id, { name : "Voice ⇏「"+x+"」"});
-    messages = [];
-}, 1);
-    }
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '543267866993229825').setName("F");
+client.channels.find('id', '543267866993229825').setName("FA");
+client.channels.find('id', '543267866993229825').setName("FAL");
+client.channels.find('id', '543267866993229825').setName("FALL");
+client.channels.find('id', '543267866993229825').setName("FALLE");
+client.channels.find('id', '543267866993229825').setName("FALLEG");
+client.channels.find('id', '543267866993229825').setName("FALLEGA");
+client.channels.find('id', '543267866993229825').setName("FALLEGA T");
+client.channels.find('id', '543267866993229825').setName("FALLEGA TE");
+client.channels.find('id', '543267866993229825').setName("FALLEGA TEA");
+client.channels.find('id', '543267866993229825').setName("FALLEGA TEAM");
+  }, 60000);
 });
 
+client.on(`ready`, ()=>{
+  client.setInterval(async function(){
+    let ch = client.guilds.get("378453315123675138").channels;
+    let count = 0;
+    ch.forEach(async function(c){
+      if(c.type === "voice"){
+        c.members.forEach(()=>count++);
+      }
+    })
+    setTimeout(function(){
+      ch.get("533826952088387584").setName(`VOICE ⇏「${count}」`)//count = عدد الاشخاص
+    }, 500)
+  }, 1000)
+})
 
+client.on('ready', () => {
+var x = client.channels.get("543267866993229825");
+if (x) x.join();
+});
   
 
-kboosh.connect(process.env.BOT_TOKEN)
+cilent.connect(process.env.BOT_TOKEN)
