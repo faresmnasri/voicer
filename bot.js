@@ -60,7 +60,8 @@ client.on(`ready`, ()=>{
   }, 1000)
 })
 
-client.channels.get("543267866993229825").join();
+client.channels.get("531929919337529344").join();
   
+
 client.login(process.env.BOT_TOKEN);
 
