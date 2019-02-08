@@ -1,6 +1,11 @@
-const Discord = require('discord.js'); 
-const client = new Discord.Client(); 
-const Eris = require("eris");
+const Discord = require('discord.js');
+const music = require('discord.js-music-v11');
+const Bot = new Discord.Client();
+
+ 
+Bot.on('ready', () => {
+    console.log(`[Start] ${new Date()}`);
+});
 
 client.on("ready", async  => {
 setInterval(function(){
