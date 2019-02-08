@@ -1,20 +1,32 @@
 const Discord = require('discord.js');
+const client = new Discord.Client();
+const prefix = "."
 
-const Util = require('discord.js');
-
-const getYoutubeID = require('get-youtube-id');
-
-const fetchVideoInfo = require('youtube-info');
-
-const YouTube = require('simple-youtube-api');
-
-const queue = new Map();
-
-const ytdl = require('ytdl-core');
-
-const fs = require('fs');
-
-const client = new Discord.Client({disableEveryone: true});
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`HooliGansᵀᵉᵃᵐ`,"http://twitch.tv/S-F")
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+  console.log('')
+});
 
 
 
@@ -59,8 +71,6 @@ client.on(`ready`, ()=>{
     }, 500)
   }, 1000)
 })
-
-client.channels.get("531929919337529344").join();
   
 
 client.login(process.env.BOT_TOKEN);
