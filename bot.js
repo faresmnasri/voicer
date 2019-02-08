@@ -38,5 +38,5 @@ var x = client.channels.get("543267866993229825");
 if (x) x.join();
 });
   
+client.login(process.env.BOT_TOKEN);
 
-cilent.connect(process.env.BOT_TOKEN)
