@@ -1,7 +1,25 @@
 const Discord = require('discord.js');
 const music = require('discord.js-music-v11');
-const Bot = new Discord.Client();
 
+
+const Util = require('discord.js');
+
+const getYoutubeID = require('get-youtube-id');
+
+const fetchVideoInfo = require('youtube-info');
+
+const YouTube = require('simple-youtube-api');
+
+
+const queue = new Map();
+
+const ytdl = require('ytdl-core');
+
+const fs = require('fs');
+
+const client = new Discord.Client({disableEveryone: true});
+
+const prefix = "!";
  
 Bot.on('ready', () => {
     console.log(`[Start] ${new Date()}`);
