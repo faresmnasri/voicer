@@ -44,21 +44,6 @@ client.user.setGame(`FALLEGA SYSTEM`,"http://twitch.tv/S-F")
   console.log('')
 });
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '543267866993229825').setName("F");
-client.channels.find('id', '543267866993229825').setName("FA");
-client.channels.find('id', '543267866993229825').setName("FAL");
-client.channels.find('id', '543267866993229825').setName("FALL");
-client.channels.find('id', '543267866993229825').setName("FALLE");
-client.channels.find('id', '543267866993229825').setName("FALLEG");
-client.channels.find('id', '543267866993229825').setName("FALLEGA");
-client.channels.find('id', '543267866993229825').setName("FALLEGA T");
-client.channels.find('id', '543267866993229825').setName("FALLEGA TE");
-client.channels.find('id', '543267866993229825').setName("FALLEGA TEA");
-client.channels.find('id', '543267866993229825').setName("FALLEGA TEAM");
-  }, 60000);
-});
 
 client.on(`ready`, ()=>{
   client.setInterval(async function(){
